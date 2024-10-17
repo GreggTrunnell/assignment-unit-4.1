@@ -14,7 +14,7 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  return 'Hello, '+ name;
+  return ('Hello, '+ name + '!');
 }
 // Remember to call the function to test
 console.log(helloName('Gregg!'));
@@ -29,7 +29,7 @@ function addNumbers(firstNumber, secondNumber) {
   let total=(firstNumber+secondNumber);
   return total;
 }*/
-//Same function different code
+//Same function different code for practice
 
 console.log(addNumbers(3, 5));
 console.log(addNumbers(30, 47))
@@ -57,16 +57,24 @@ console.log(isPositive(-2));
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
-return array.push('something')
+  if (array.length > 0) {
+    return array[array.length - 1];
+  } else {
+    return 
+  }
 }
-console.log(getLast);
+
+console.log(getLast('last'));
+
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
 
-}
+
+
+
 
 // ----------------------
 // Stretch Goals
@@ -97,6 +105,7 @@ function allPositive() {
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
 
 
 // DO NOT MODIFY
