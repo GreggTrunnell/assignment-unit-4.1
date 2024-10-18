@@ -29,15 +29,15 @@ function addNumbers(firstNumber, secondNumber) {
 }*/
 //Same function different code for practice
 
-console.log(addNumbers(3, 5));
-console.log(addNumbers(30, 47))
+console.log('Three plus five equals ', addNumbers(3, 5));
+console.log('Thirty plus forty-seven equals ', addNumbers(30, 47))
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(a,b,c) {
    return a*b*c;
 }
-console.log(multiplyThree(3,4,5))
-console.log(multiplyThree(2,3,4));
+console.log('Three times 4 times 5 equals ', multiplyThree(3,4,5))
+console.log('Two times three times 4 equals ', multiplyThree(2,3,4));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -49,25 +49,34 @@ function isPositive(number) {
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log(isPositive(3));
-console.log(isPositive(-2));
+console.log('Is three positive? ', isPositive(3));
+console.log('Is negative two positive? ' , isPositive(-2));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast(array) {}
+function getLast(array) {
+  if (array.length === 0) {
+    return undefined;  
+  }
+  return array[array.length - 1];  
+}
+ 
+console.log('Is array defined? ' , getLast([2]));
+console.log('Is array defined? ' , getLast([]));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
-function findValue(value,array){
+function find(value,array){
   for (let i = 0; i < array.length; i++)
     {if (array[i]===value)
       return true;}
-      return false;
-}
-console.log(findValue( 4, [1,2,3]));
-console.log(findValue( 3, [1,2,3]));
+      {return false;
+}}
+console.log('Is four in array? ', find( 4, [1,2,3]));
+console.log('Is three in array? ', find( 3, [1,2,3]));
+console.log('Is five in array? ', find(5, [ 2,3,6,5]));
 
 // ----------------------
 // Stretch Goals
@@ -75,17 +84,27 @@ console.log(findValue( 3, [1,2,3]));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+if (letter===string[0])
+  return true;
+  else return false;
 }
-
+console.log('Is the first letter g? ', isFirstLetter('g', 'get string'));
+console.log('Is the first letter f? ', isFirstLetter('f', 'get string'));
+console.log('Is the first letter e? ', isFirstLetter('e', 'get string'));
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
-
+ 
+  for(let i = 0; i < array.length; i++){
+    sum += array[i];
+  }
   // TODO: return the sum
+  return sum;
 }
+console.log('The sum of array is: ', sumAll([]));
+console.log('The sum of the array is: ' , sumAll([3,5,7]));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
