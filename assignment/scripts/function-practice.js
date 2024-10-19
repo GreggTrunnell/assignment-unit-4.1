@@ -23,11 +23,7 @@ console.log(helloName('Gregg!'));
 function addNumbers(firstNumber, secondNumber) {
       return (firstNumber+secondNumber) ;
       }
-/*function addNumbers(firstNumber, secondNumber){
-  let total=(firstNumber+secondNumber);
-  return total;
-}*/
-//Same function different code for practice
+
 
 console.log('Three plus five equals ', addNumbers(3, 5));
 console.log('Thirty plus forty-seven equals ', addNumbers(30, 47))
